@@ -1,0 +1,40 @@
+/* General CSS prior to signing in - Dark Mode */
+
+body{
+  background-color: black;
+}
+
+
+.welcome-message{
+  color: white;
+  font-family: 'Poppins';
+  font-size: 100px;
+  line-height: 90px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.subtitle{
+  color: grey;
+  font-family: 'Poppins';
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tutorial{
+  display: block;
+  width: 300px;
+  height: 100px;
+  border-radius: 50px;
+  font-size: 26px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tutorial:hover{
+  background-color: #00000000;
+  color: #fff;
+  cursor: pointer;
+}
