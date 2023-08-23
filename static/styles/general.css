@@ -25,6 +25,20 @@ body , html{
   margin-bottom: 16px;
 }
 
+.view-window {
+  border: rgb(226, 226, 226) solid 2px;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: medium;
+  line-height: 40px;
+}
+
+.border-box{
+  border: rgb(226, 226, 226) solid 1px;
+}
+
 .sidebar {
   /* make the sidebar sticky */
   position: -webkit-sticky; /* Required for Safari */
@@ -33,14 +47,12 @@ body , html{
   top: 85px;
 }
 
-.view-window {
-  border: black solid 1px;
-  margin: 0;
-  padding: 0;
-  height: 100%
+.number-items {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0px;
 }
 
 .categories {
-  flex: 1;
-  border: black solid 1px;
+  font-size: 16px;
 }
