@@ -19,9 +19,27 @@
     </div>
     <div class="col-10 ">
       <div class="row border-box">
-        <p class="fw-bold">Categories</p>
+        <div class="sort-container mb-3">
+          <label for="sort">Sort by:</label>
+          <select id="sort" class="form-control" style="width: auto;" onchange="location = this.value;">
+              <option value="?sort=price-asc" {% if request.GET.sort == 'price-asc' %}selected{% endif %}>Price: Low to High</option>
+              <option value="?sort=price-desc" {% if request.GET.sort == 'price-desc' %}selected{% endif %}>Price: High to Low</option>
+              <option value="?sort=newest" {% if request.GET.sort == 'newest' %}selected{% endif %}>Newest</option>
+          </select>
+        </div>
       </div>
       <div class="row border-box">
+          {% for product in products %}
+          <div class="col-md-4 mb-4">
+              <div class="card">
+                  <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                  <div class="card-body">
+                      <h5 class="card-title">{{ product.name }}</h5>
+                      <p class="card-text">${{ product.price }}</p>
+                  </div>
+              </div>
+            {% endfor %}
+          </div>
         <div class="spacer"></div>
       </div>
     </div>
