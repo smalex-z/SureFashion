@@ -21,11 +21,10 @@
   .left-section {
     display: flex;
     align-items: center;
-    width: 400px;
   }
   
   .logo {
-    height: 90%;
+    height: 72px;
   }
   
   .middle-section {
@@ -83,7 +82,6 @@
     align-items: center;
     justify-content: flex-end;
     margin-right: 20px;
-    width: 400px;
   }
   
   .header-spacer{
@@ -92,4 +90,58 @@
   }
   
   
+/* Media query for screens smaller than 1300px */
+@media only screen and (max-width: 1300px) {
+  .logo {
+    height: 56px; /* You may adjust as needed */
+  }
+
+  .header , .header-spacer {
+    height: 66px;
+  }
   
+
+  .header-button {
+    font-size: large; /* Reduce font size */
+    height: 40px;
+    width: 120px;
+    line-height: 40px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .signup-button{
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: large;
+  }
+
+}
+
+/* Media query for screens smaller than 1000px */
+@media only screen and (max-width: 1000px) {
+  .logo {
+    height: 40px; /* You may adjust as needed */
+  }
+  .header {
+    height: 47px;
+  }
+
+  .header-button {
+    font-size: small; /* Reduce font size */
+    height: 30px;
+    width: 90px;
+    line-height: 30px;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  .signup-button{
+    width: 90px;
+    height: 30px;
+    border-radius: 15px;
+    font-size: small;
+  }
+
+}

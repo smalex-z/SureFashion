@@ -10,38 +10,72 @@
   <div class="row view-window">
     <div class="col-2 sidebar">
       <div class="row border-box">
-        <p class="number-items">1000 Items</p>
+        <p class="number-items">{{ product_count }} Items</p>
       </div>
       <div class="row categories border-box">
-        <p class="fw-bold">Category</p>
+        <p class="fw-bold mb-0">Category</p>
         <p class="">Shirt<br>Hoodies<br>Pants<br>Shorts</p>
       </div>
     </div>
     <div class="col-10 ">
-      <div class="row border-box">
-        <div class="sort-container mb-3">
-          <label for="sort">Sort by:</label>
+      <div class="row border-box pt-2 pb-3">
+        <div class="col d-flex align-items-center p-0">
+          <p class="mb-0 mx-2">Sort by:</p>
           <select id="sort" class="form-control" style="width: auto;" onchange="location = this.value;">
-              <option value="?sort=price-asc" {% if request.GET.sort == 'price-asc' %}selected{% endif %}>Price: Low to High</option>
-              <option value="?sort=price-desc" {% if request.GET.sort == 'price-desc' %}selected{% endif %}>Price: High to Low</option>
-              <option value="?sort=newest" {% if request.GET.sort == 'newest' %}selected{% endif %}>Newest</option>
+            <option value="?sort=price-asc" {% if request.GET.sort == 'price-asc' %}selected{% endif %}>Price: Low to High</option>
+            <option value="?sort=price-desc" {% if request.GET.sort == 'price-desc' %}selected{% endif %}>Price: High to Low</option>
+            <option value="?sort=newest" {% if request.GET.sort == 'newest' %}selected{% endif %}>Newest</option>
           </select>
         </div>
+        <div class="col text-end">
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
+            + Add Item
+          </button>
+        </div>
       </div>
-      <div class="row border-box">
-          {% for product in products %}
-          <div class="col-md-4 mb-4">
-              <div class="card">
-                  <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
-                  <div class="card-body">
-                      <h5 class="card-title">{{ product.name }}</h5>
-                      <p class="card-text">${{ product.price }}</p>
-                  </div>
+      <div class="row border-box custom-row">
+        {% for product in products %}
+        <div class="custom-card-column">
+            <div class="card aspect-ratio-card">
+              <div class="image-container">
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
               </div>
-            {% endfor %}
-          </div>
-        <div class="spacer"></div>
+                <div class="card-body">
+                  <p class="mb-0">{{ product.name }}</p>
+                  <p class="card-text">${{ product.price }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
       </div>
+      <div class="spacer"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+        <form method="post" enctype="multipart/form-data"> {% csrf_token %} {{ form.as_p }} <button type="submit">Create Product</button> </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
     </div>
   </div>
 </div>
