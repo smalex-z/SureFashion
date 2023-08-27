@@ -40,12 +40,10 @@ def logout_view(request):
 
 @login_required
 def wardrobe(request):
-    products = Product.objects.all()
-    sort_by = request.GET.get('sort')
-    if sort_by == None:
-        sort_by = 'price-asc'
+    products = Product.objects.filter(user=request.user)
+    sort_by = request.GET.get('sort', 'price-asc')
 
-    product_count = Product.objects.count()
+    product_count = products.count()
 
     if sort_by == 'price-asc':
         products = products.order_by('price')
@@ -58,8 +56,10 @@ def wardrobe(request):
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
-            return redirect('../wardrobe') # Redirect to the product listing page after successful creation
+            product = form.save(commit=False)
+            product.user = request.user  # Set the current user as the owner of the product
+            product.save()
+            return redirect('../wardrobe')  # Redirect to the product listing page after successful creation
     else:
         form = ProductForm()
 

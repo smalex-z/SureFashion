@@ -25,10 +25,7 @@
     </div>
     <div class="middle-section"></div>
     <div class="right-section">
-      <button onclick="window.location.href='{% url 'authentication' %}';" class="header-button login">
-        Login
-      </button>
-      <button onclick="window.location.href='{% url 'authentication' %}';" class="signup-button">Sign Up</button>
+      <button onclick="window.location.href='{% url 'authentication' %}';" class="login-button">Login</button>
     </div>
   </div>
   <div class="header-spacer"></div>
@@ -38,7 +35,7 @@
       1. Upload Items from your Wardrobe - 2. Generate new outfits with one
       click - 3. Or build your own!
     </p>
-    <button type="button" class="btn btn-light tutorial">Get Started</button>
+    <button type="button" onclick="window.location.href='{% url 'authentication' %}';" class="btn btn-light tutorial">Get Started</button>
     <img src="{% static 'images/fashion.png' %}" alt="Buck" />
   </div>
   <div class="spacer">
