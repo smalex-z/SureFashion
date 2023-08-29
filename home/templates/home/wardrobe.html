@@ -27,8 +27,6 @@
           <p class="mb-0 mx-2">Sort by:</p>
           <select id="sort" class="form-control" style="width: auto;" onchange="location = this.value;">
             <!--TODO: why tf does vsc formatting remove the two spaces and how to remove this-->
-            <option value="?sort=price-asc" {% if request.GET.sort == 'price-asc' %}selected{% endif %}>Price: Low to High</option>
-            <option value="?sort=price-desc" {% if request.GET.sort == 'price-desc' %}selected{% endif %}>Price: High to Low</option>
             <option value="?sort=newest" {% if request.GET.sort == 'newest' %}selected{% endif %}>Newest</option>
             <option value="?sort=heat" {% if request.GET.sort == 'heat-asc' %}selected{% endif %}>Heat</option>
 
@@ -42,13 +40,18 @@
       </div>
       <div class="row border-box custom-row">
         {% for product in products %}
-        <div class="custom-card-column">
-          <div class="card aspect-ratio-card" onclick="openPreviewModal('{{ product.image.url }}', '{{ product.name }}', '{{ product.price }}', '{{ product.heat_index }}')">
-            <div class="image-container">
-              <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+        <div class="card custom-card-column" onclick="openPreviewModal('{{ product.image.url }}', '{{ product.name }}', '{{ product.heat_index }}')">
+          <div class="image-container">
+            <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+          </div>
+          <div class="card-body">
+            <div class="fill-space">
+              <p class="mb-0">{{ product.name }}</p>
+              <p class="card-text">Heat Index: {{product.heat_index}}</p>=
             </div>
-            <div class="card-body">
-              .
+            <div class="colors">
+              {{product.primary_color}}
+              {{product.secondary_color}}
             </div>
           </div>
         </div>
@@ -100,15 +103,19 @@
 <div class="modal" id="previewModal">
   <div class="modal-dialog">
     <div class="modal-content">
+      
+      <!-- Modal Header -->
       <div class="modal-header">
         <h4 class="modal-title" id="previewProductName"></h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
+      
+      <!-- Modal body -->
       <div class="modal-body text-center">
         <img id="previewImage" class="img-fluid" alt="Product Preview">
-        <p id="previewProductPrice" class="mt-2"></p>
         <p id="previewHeatIndex"></p>
       </div>
+
     </div>
   </div>
 </div>

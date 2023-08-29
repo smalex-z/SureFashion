@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Product
+from .models import Product, SimilarItem, Style
 from .forms import ProductForm, RegisterForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
@@ -55,14 +55,10 @@ def wardrobe(request):
     #Product Count
     product_count = products.count()
     
-    #Sort the Wardrobe in order- Default is Ascending Price
-    sort_by = request.GET.get('sort', 'price-asc')
+    #Sort the Wardrobe in order- Default is Newest
+    sort_by = request.GET.get('sort', 'newest')
     
-    if sort_by == 'price-asc':
-        products = products.order_by('price')
-    elif sort_by == 'price-desc':
-        products = products.order_by('-price')
-    elif sort_by == 'newest':
+    if  sort_by == 'newest':
         products = products.order_by('-date_added')
     elif sort_by == 'heat':
         products = products.order_by('-heat_index')
@@ -99,8 +95,12 @@ def inspiration(request):
 # Views for the admin-only page
 @user_passes_test(lambda user: user.is_superuser)
 def admin_items(request):
-    return render(request, 'home/admin_items.html')
+    products = SimilarItem.objects.filter()
+    context = {'products': products}
+    return render(request, 'home/wardrobe.html', context)
 
 @user_passes_test(lambda user: user.is_superuser)
 def admin_styles(request):
-    return render(request, 'home/admin_styles.html')
+    products = Style.objects.filter()
+    context = {'products': products}
+    return render(request, 'home/wardrobe.html', context)

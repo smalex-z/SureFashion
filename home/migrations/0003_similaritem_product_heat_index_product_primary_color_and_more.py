@@ -72,11 +72,6 @@ class Migration(migrations.Migration):
             name="name",
             field=models.CharField(default="n/a", max_length=200),
         ),
-        migrations.AlterField(
-            model_name="product",
-            name="price",
-            field=models.DecimalField(decimal_places=2, default=1.0, max_digits=7),
-        ),
         migrations.CreateModel(
             name="Style",
             fields=[

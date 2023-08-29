@@ -52,19 +52,12 @@
   }
   
   .custom-card-column {
+    display: flex;        /* Added to make contents flex items */
+    flex-direction: column; 
+    height: 450px;
     flex: 0 0 20%; /* Do not grow, do not shrink, start at 20% */
     max-width: 20%;
     margin: 0 0px;
-    padding: 0px;
-  }
-  
-  /* To make the card have a 5:8 ratio */
-  .aspect-ratio-card {
-    display: flex;        /* Added to make contents flex items */
-    flex-direction: column; 
-    height: 0;
-    padding-bottom: 160%;  /* Adjusted for 5:8 aspect ratio */
-    overflow: hidden;
   }
   
   .image-container {
@@ -88,9 +81,12 @@
   .card-body {
     padding: 5px;
     flex-grow: 1;      /* This ensures the text portion takes up the remainder space */
+    display: flex;
+    flex-direction: column;
   }
   
   .fill-space{
+    flex-grow: 1;
     font-size: small;
     line-height: 16px;
   }
@@ -105,6 +101,7 @@
     .custom-card-column {
         flex: 0 0 25%; 
         max-width: 25%;
+        height: 360px;
     }
   }
   
@@ -113,6 +110,7 @@
     .custom-card-column {
         flex: 0 0 33.33%; 
         max-width: 33.33%;
+        height: 270px;
     }
   }
   

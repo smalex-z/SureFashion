@@ -21,10 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Script for Openning Product Preview
-function openPreviewModal(imageUrl, productName, productPrice, heatIndex) {
+function openPreviewModal(imageUrl, productName, heatIndex) {
     document.getElementById('previewImage').src = imageUrl;
     document.getElementById('previewProductName').textContent = productName;
-    document.getElementById('previewProductPrice').textContent = '$' + productPrice;
     document.getElementById('previewHeatIndex').textContent = 'Heat Index: ' + heatIndex;
     $('#previewModal').modal('show');
 }

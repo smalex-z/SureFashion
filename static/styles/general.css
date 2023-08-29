@@ -16,5 +16,8 @@
 
 body , html{
   background-color: rgba(233, 233, 233, 0.295);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   /*TODO ASAP: Get body to 100 vh and override in wardrobe */
 }

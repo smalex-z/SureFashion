@@ -86,7 +86,6 @@ class Style(models.Model):
 class Product(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="products")
     name = models.CharField(max_length=200, default='n/a')
-    price = models.DecimalField(max_digits=7, decimal_places=2, default=1.00)
     image = models.ImageField(upload_to='products/', default='products/default.jpg')
     date_added = models.DateTimeField(auto_now_add=True)
     category = models.CharField(max_length=50, choices=[('top', 'Top'), ('bottom', 'Bottom'), ('shoes', 'Shoes'), ('accessory', 'Accessory')], default='top')
