@@ -3,7 +3,7 @@ from .models import Product
 from .forms import ProductForm, RegisterForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 
 # Create your views here.
@@ -86,36 +86,21 @@ def wardrobe(request):
 #Inspiration
 @login_required
 def inspiration(request):
-    #
+    #User can only see their own products
     products = Product.objects.filter(user=request.user)
     
-    #Product Count
-    product_count = products.count()
     
-    sort_by = request.GET.get('sort', 'price-asc')
 
-    if sort_by == 'price-asc':
-        products = products.order_by('price')
-    elif sort_by == 'price-desc':
-        products = products.order_by('-price')
-    elif sort_by == 'newest':
-        products = products.order_by('-date_added')
-    elif sort_by == 'heat':
-        products = products.order_by('-heat_index')
-
-
-    if request.method == "POST":
-        form = ProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            product = form.save(commit=False)
-            product.user = request.user  # Set the current user as the owner of the product
-            product.save()
-            return redirect('../wardrobe')  # Redirect to the product listing page after successful creation
-    else:
-        form = ProductForm()
-
-    context = {'products': products, 'product_count': product_count, 'form': form}
+    context = {'products': products}
 
     return render(request, 'home/inspiration.html', context)
 
-#TODO: Admin View page, all Similar Items and All styles (@login_admin_required?)
+
+# Views for the admin-only page
+@user_passes_test(lambda user: user.is_superuser)
+def admin_items(request):
+    return render(request, 'home/admin_items.html')
+
+@user_passes_test(lambda user: user.is_superuser)
+def admin_styles(request):
+    return render(request, 'home/admin_styles.html')

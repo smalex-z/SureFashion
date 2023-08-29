@@ -10,23 +10,17 @@
   <!--TODO: KYS AND FIND A NEW NAME JFC-->
   <title>Fashionista</title>
 
-  <!--TODO: Convert these into Static links, same for home.html-->
-  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.cdnfonts.com/css/source-sans-pro" rel="stylesheet">
+  <link href={% static "import_styles/poppins_font.css" %} rel="stylesheet" />
+  <link href={% static "import_styles/roboto_font.css" %} rel="stylesheet" />
+  <link href={% static "import_styles/source_sans_font.css" %} rel="stylesheet" />
 
-  
-  <!--TODO: Convert these once ur off plane, dont forget to delete script at the bottom pls ty-->
-  <!--
-  <link href={% static "styles/bootstrap.min.css" %} rel="stylesheet" />
-  <script src={% static "styles/bootstrap.min.css" %}></script>
-  -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
+  <link href={% static "import_styles/bootstrap.min.css" %} rel="stylesheet" />
   <link rel="stylesheet" href={% static "styles/general.css" %}>
   <link rel="stylesheet" href={% static "styles/header.css" %}>
-  <link rel="stylesheet" href={% static "styles/wardrobe.css" %}>
-  <link rel="stylesheet" href={% static "styles/inspiration.css" %}>
+
+  <script src={% static "import_styles/bootstrap.bundle.min.js" %}></script>
+  <script src={% static "import_styles/dev_jquery-3.7.1.js" %}></script>
+  <!--TODO: Pre-Release, change to "import_styles/jquery-3.7.1.js"-->
 </head>
 
 <body>
@@ -54,8 +48,6 @@
   <div class="header-spacer"></div>
   {# This is the base template that all other templates will extend #}
   {%block content %}{% endblock content%}
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 
 </html>

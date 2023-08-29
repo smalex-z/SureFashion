@@ -2,6 +2,9 @@
 {% load static %}
 {% block title %}Wardrobe{%endblock title %}
 {% block content %}
+<link rel="stylesheet" href={% static "styles/wardrobe.css" %}>
+<script src={% static "javascript/wardrobe.js" %}></script>
+
 <div class="container-fluid px-5">
   <div class="row subtitle">
     <h2>Your Wardrobe<br></h2>
@@ -23,7 +26,7 @@
         <div class="col d-flex align-items-center p-0">
           <p class="mb-0 mx-2">Sort by:</p>
           <select id="sort" class="form-control" style="width: auto;" onchange="location = this.value;">
-            <!--TODO: why tf does formatting remove the two spaces and how to remove this-->
+            <!--TODO: why tf does vsc formatting remove the two spaces and how to remove this-->
             <option value="?sort=price-asc" {% if request.GET.sort == 'price-asc' %}selected{% endif %}>Price: Low to High</option>
             <option value="?sort=price-desc" {% if request.GET.sort == 'price-desc' %}selected{% endif %}>Price: High to Low</option>
             <option value="?sort=newest" {% if request.GET.sort == 'newest' %}selected{% endif %}>Newest</option>
@@ -32,7 +35,7 @@
           </select>
         </div>
         <div class="col text-end">
-          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">
+          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addProduct">
             + Add Item
           </button>
         </div>
@@ -40,13 +43,12 @@
       <div class="row border-box custom-row">
         {% for product in products %}
         <div class="custom-card-column">
-          <div class="card aspect-ratio-card">
+          <div class="card aspect-ratio-card" onclick="openPreviewModal('{{ product.image.url }}', '{{ product.name }}', '{{ product.price }}', '{{ product.heat_index }}')">
             <div class="image-container">
               <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
             </div>
             <div class="card-body">
-              <p class="mb-0">{{ product.name }}</p> <!--TODO: make this lineheight lower and pretty it up-->
-              <p class="card-text">${{ product.price }}<br>Heat Index: {{product.heat_index}}</p> <!--TODO:This top-->
+              .
             </div>
           </div>
         </div>
@@ -56,11 +58,10 @@
     </div>
   </div>
 </div>
-</div>
 
 <!-- TODO: This shite finna need a lotta work gawd damn; Follow the notebook-->
-<!-- The Modal -->
-<div class="modal" id="myModal">
+<!-- Add Product Modal -->
+<div class="modal" id="addProduct">
   <div class="modal-dialog">
     <div class="modal-content">
 
@@ -72,15 +73,42 @@
 
       <!-- Modal body -->
       <div class="modal-body">
-        Modal body..
-        <form method="post" enctype="multipart/form-data"> {% csrf_token %} {{ form.as_p }} <button type="submit">Create Product</button> </form>
+        <!-- Stage 1: Start Button -->
+        <button id="startButton" class="btn btn-primary">Start</button>
+      
+        <!-- Stage 2: Form (hidden initially) -->
+        <div id="formStage" style="display: none;">
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Create Product</button>
+          </form>
+        </div>
       </div>
 
       <!-- Modal footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button id="cancelButton" type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
       </div>
 
+    </div>
+  </div>
+</div>
+
+<!-- Product Preview Modal -->
+<!-- TODO: 2 stages, Edit the product -->
+<div class="modal" id="previewModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="previewProductName"></h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="previewImage" class="img-fluid" alt="Product Preview">
+        <p id="previewProductPrice" class="mt-2"></p>
+        <p id="previewHeatIndex"></p>
+      </div>
     </div>
   </div>
 </div>

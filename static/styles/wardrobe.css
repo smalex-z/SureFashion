@@ -54,7 +54,7 @@
   .custom-card-column {
     flex: 0 0 20%; /* Do not grow, do not shrink, start at 20% */
     max-width: 20%;
-    margin: 0 0px 15px;
+    margin: 0 0px;
     padding: 0px;
   }
   
@@ -90,6 +90,15 @@
     flex-grow: 1;      /* This ensures the text portion takes up the remainder space */
   }
   
+  .fill-space{
+    font-size: small;
+    line-height: 16px;
+  }
+
+  .colors{
+    font-size: x-small;
+    line-height: 16px;
+  }
   
   /* For tablets: 4 cards in a row */
   @media (max-width: 992px) {
