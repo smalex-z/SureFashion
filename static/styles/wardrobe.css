@@ -1,0 +1,109 @@
+/* CSS for everything Wardrobe related. Sorry, I'm a little too lazy to comment/explain everything. When in doubt, CHATGPT it*/
+
+.subtitle {
+    height: 75px;
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .view-window {
+    border: rgb(238, 238, 238) solid 2px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: medium;
+    line-height: 40px;
+  }
+  
+  /*gives the boxes a thin grey border*/
+  .border-box{
+    border: rgb(238, 238, 238) solid 2px;
+  }
+  
+  .sidebar {
+    /* make the sidebar sticky */
+    position: -webkit-sticky; /* Required for Safari */
+    position: sticky;
+    height:50%;
+    top: 85px;
+  }
+  
+  .number-items {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+  
+  .categories {
+    font-size: 16px;
+  }
+  
+  .custom-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card{
+    border-radius: 0px;
+    border: 1px solid #f0f0f0;  /* 1px wide grey border */
+    padding: 10px;
+  }
+  
+  .custom-card-column {
+    flex: 0 0 20%; /* Do not grow, do not shrink, start at 20% */
+    max-width: 20%;
+    margin: 0 0px 15px;
+    padding: 0px;
+  }
+  
+  /* To make the card have a 5:8 ratio */
+  .aspect-ratio-card {
+    display: flex;        /* Added to make contents flex items */
+    flex-direction: column; 
+    height: 0;
+    padding-bottom: 160%;  /* Adjusted for 5:8 aspect ratio */
+    overflow: hidden;
+  }
+  
+  .image-container {
+    flex-grow: 0;       /* Image container shouldn't grow */
+    height: 0;
+    padding-top: 125%;  /* 4:5 aspect ratio of the available space */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .card-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #c7c7c7;  /* 1px wide grey border */
+  }
+  
+  .card-body {
+    padding: 5px;
+    flex-grow: 1;      /* This ensures the text portion takes up the remainder space */
+  }
+  
+  
+  /* For tablets: 4 cards in a row */
+  @media (max-width: 992px) {
+    .custom-card-column {
+        flex: 0 0 25%; 
+        max-width: 25%;
+    }
+  }
+  
+  /* For mobile devices: 3 cards in a row */
+  @media (max-width: 768px) {
+    .custom-card-column {
+        flex: 0 0 33.33%; 
+        max-width: 33.33%;
+    }
+  }
+  

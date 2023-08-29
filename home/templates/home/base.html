@@ -1,3 +1,4 @@
+<!--This is our base template. We use this for most of our tabs- contains our HTML for the header and the buttons inside-->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,16 +7,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!--TODO: KYS AND FIND A NEW NAME JFC-->
   <title>Fashionista</title>
 
+  <!--TODO: Convert these into Static links, same for home.html-->
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.cdnfonts.com/css/source-sans-pro" rel="stylesheet">
 
+  
+  <!--TODO: Convert these once ur off plane, dont forget to delete script at the bottom pls ty-->
+  <!--
+  <link href={% static "styles/bootstrap.min.css" %} rel="stylesheet" />
+  <script src={% static "styles/bootstrap.min.css" %}></script>
+  -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
   <link rel="stylesheet" href={% static "styles/general.css" %}>
   <link rel="stylesheet" href={% static "styles/header.css" %}>
+  <link rel="stylesheet" href={% static "styles/wardrobe.css" %}>
+  <link rel="stylesheet" href={% static "styles/inspiration.css" %}>
 </head>
 
 <body>
@@ -29,7 +40,7 @@
       <button onclick="window.location.href='{% url 'wardrobe' %}';" class="header-button">
         WARDROBE
       </button>
-      <button class="header-button">INSPIRATION</button>
+      <button onclick="window.location.href='{% url 'inspiration' %}';" class="header-button">INSPIRATION</button>
       <button class="header-button">BUILD</button>
     </div>
     <div class="right-section">
