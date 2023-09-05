@@ -51,6 +51,8 @@ def logout_view(request):
 def wardrobe(request):
     #User can only see their own products
     products = Product.objects.filter(user=request.user)
+    styles = Style.objects.filter()
+    SimilarItems = SimilarItem.objects.filter()
 
     #Product Count
     product_count = products.count()
@@ -61,7 +63,10 @@ def wardrobe(request):
     if  sort_by == 'newest':
         products = products.order_by('-date_added')
     elif sort_by == 'heat':
-        products = products.order_by('-heat_index')
+        products = products.order_by('heat_index')
+    elif sort_by == 'formality':
+        products = products.order_by('formality')
+
 
     #Adding a product to your wardrobe
     if request.method == "POST":
@@ -74,7 +79,8 @@ def wardrobe(request):
     else:
         form = ProductForm()
 
-    context = {'products': products, 'product_count': product_count, 'form': form}
+    context = {'products': products, 'product_count': product_count, 
+               'form': form, 'styles': styles, 'SimilarItems': SimilarItems}
 
     return render(request, 'home/wardrobe.html', context)
 
@@ -84,12 +90,46 @@ def wardrobe(request):
 def inspiration(request):
     #User can only see their own products
     products = Product.objects.filter(user=request.user)
+    #print(products[1])
     
     
 
     context = {'products': products}
 
     return render(request, 'home/inspiration.html', context)
+
+def generate(request):
+    products = Product.objects.filter(user=request.user)
+
+    outerwear, tops, bottoms, shoes, accessories, errors = []
+
+    #sort the products
+    for product in products:
+        #TODO: Surely theres a cleaner way of doing this
+        #TODO: figure out how to do product.id but with category instead
+        if product.id == 'outerwear':
+            outerwear.append(product) 
+        elif product.id == 'top':
+            tops.append(product)
+        elif product.id == 'bottom':
+            bottoms.append(product)
+        elif product.id == 'shoes':
+            shoes.append(product)
+        elif product.id == 'accessories':
+            accessories.append(product)
+        else:
+            print("How'd we end up here? Category Error")
+            errors.append(product)
+
+
+    
+
+    
+    return 
+
+
+
+
 
 
 # Views for the admin-only page

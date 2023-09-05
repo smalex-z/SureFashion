@@ -13,4 +13,14 @@ class ProductForm(forms.ModelForm):
     secondary_color = forms.TypedChoiceField(choices=SECONDARY_COLOR_CHOICES, coerce=str)
     class Meta:
         model = Product
-        fields = ['name', 'image', 'category', 'primary_color', 'secondary_color', 'heat_index']
+        fields = ['name', 'image', 'category', 'primary_color', 'secondary_color', 'heat_index', 'belt']
+
+#TODO: build this form
+class GenerateForm(forms.ModelForm):
+    primary_color = forms.TypedChoiceField(choices=PRIMARY_COLOR_CHOICES, coerce=str)
+    secondary_color = forms.TypedChoiceField(choices=SECONDARY_COLOR_CHOICES, coerce=str)
+    class Meta:
+        model = Product
+        fields = ['name', 'image', 'category', 'primary_color', 'secondary_color', 'heat_index', 'belt']
+
+    

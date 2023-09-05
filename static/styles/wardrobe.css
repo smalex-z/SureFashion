@@ -39,6 +39,19 @@
   .categories {
     font-size: 16px;
   }
+
+  .nav-tabs .nav-link {
+    width: 100%;
+    border: 0px solid #ccc; /* Add a border */
+    border-radius: 0px;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .nav-item{
+    width: 100%;
+  }
   
   .custom-row {
     display: flex;
@@ -94,6 +107,15 @@
   .colors{
     font-size: x-small;
     line-height: 16px;
+  }
+
+  .color-circle{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 1px solid #ccc;
   }
   
   /* For tablets: 4 cards in a row */

@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             model_name="similaritem",
             name="image",
             field=models.ImageField(
-                default="products/default.jpg", upload_to="products/"
+                default="products/default.png", upload_to="products/"
             ),
         ),
         migrations.AlterField(
