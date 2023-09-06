@@ -11,7 +11,7 @@ urlpatterns = [
     path('inspiration/', views.inspiration, name= "inspiration"),       #Inspiration
     path('admin_items/', views.admin_items, name='admin_items'),        #Admin page to view Similar items
     path('admin_styles/', views.admin_styles, name='admin_styles'),     #Admin page to view styles
-    #path('auth/', include('social_django.urls', namespace='social')),  # Include social-auth URLs here
+    path('auth/', include('social_django.urls', namespace='social')),  # Include social-auth URLs here
 
 ]
 
