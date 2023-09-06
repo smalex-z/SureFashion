@@ -162,6 +162,7 @@ LOGGING = {
 # Social Authentication Settings
 AUTHENTICATION_BACKENDS = (
     # ... other authentication backends ...
+    'django.contrib.auth.backends.ModelBackend',
     'social_core.backends.google.GoogleOAuth2',
 )
 
