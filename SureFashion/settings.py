@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     "livereload",
     "django.contrib.staticfiles",
     'social_django',
-
 ]
 
 MIDDLEWARE = [
