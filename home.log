@@ -1,9 +1,9 @@
 Watching for file changes with StatReloader
 Waiting for apps ready_event.
 Apps ready_event triggered. Sending autoreload_started signal.
-Watching dir C:\Users\alexz\Coding\Fashionista\home\templates with glob **/*.
-Watching dir C:\Users\alexz\Coding\Fashionista\locale with glob **/*.mo.
-Watching dir C:\Users\alexz\Coding\Fashionista\home\locale with glob **/*.mo.
+Watching dir C:\Users\alexz\Coding\SureFashion\home\templates with glob **/*.
+Watching dir C:\Users\alexz\Coding\SureFashion\locale with glob **/*.mo.
+Watching dir C:\Users\alexz\Coding\SureFashion\home\locale with glob **/*.mo.
 Watching dir C:\Users\alexz\Anaconda3\lib\site-packages\livereload\locale with glob **/*.mo.
 (0.000) 
             SELECT name, type FROM sqlite_master
@@ -52,7 +52,7 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\django\db\models\constraints.py 
 File C:\Users\alexz\anaconda3\Lib\calendar.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\forms\widgets.py first seen with mtime 1691988852.376285
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\db\models\fields\related_lookups.py first seen with mtime 1691988852.3607626
-File C:\Users\alexz\Coding\Fashionista\home\models.py first seen with mtime 1693514410.538744
+File C:\Users\alexz\Coding\SureFashion\home\models.py first seen with mtime 1693514410.538744
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\db\backends\sqlite3\_functions.py first seen with mtime 1691988852.3308275
 File C:\Users\alexz\anaconda3\Lib\warnings.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\db\models\expressions.py first seen with mtime 1691988852.351189
@@ -66,7 +66,7 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\django\conf\urls\static.py first
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\db\models\fields\mixins.py first seen with mtime 1691988852.358189
 File C:\Users\alexz\anaconda3\Lib\asyncio\protocols.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\selectors.py first seen with mtime 1670351481.0
-File C:\Users\alexz\Coding\Fashionista\home\urls.py first seen with mtime 1693341709.0661685
+File C:\Users\alexz\Coding\SureFashion\home\urls.py first seen with mtime 1693341709.0661685
 File C:\Users\alexz\anaconda3\Lib\quopri.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\email\mime\text.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\db\models\functions\datetime.py first seen with mtime 1691988852.3627641
@@ -103,7 +103,7 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\django\core\signing.py first see
 File C:\Users\alexz\anaconda3\Lib\nturl2path.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\DLLs\_socket.pyd first seen with mtime 1677694807.0
 File C:\Users\alexz\anaconda3\Lib\logging\config.py first seen with mtime 1670351481.0
-File C:\Users\alexz\Coding\Fashionista\fashionista\settings.py first seen with mtime 1693714444.7785654
+File C:\Users\alexz\Coding\SureFashion\SureFashion\settings.py first seen with mtime 1693714444.7785654
 File C:\Users\alexz\anaconda3\Lib\site-packages\sqlparse\filters\output.py first seen with mtime 1691988850.180533
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\core\handlers\base.py first seen with mtime 1691988852.2759109
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\db\backends\base\features.py first seen with mtime 1691988852.311122
@@ -135,7 +135,7 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\django\core\checks\messages.py f
 File C:\Users\alexz\anaconda3\Lib\site-packages\zope\__init__.py first seen with mtime 1610124826.0
 File C:\Users\alexz\anaconda3\DLLs\_sqlite3.pyd first seen with mtime 1677694809.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\utils\connection.py first seen with mtime 1691988852.4590628
-File C:\Users\alexz\Coding\Fashionista\home\admin.py first seen with mtime 1693188351.7522657
+File C:\Users\alexz\Coding\SureFashion\home\admin.py first seen with mtime 1693188351.7522657
 File C:\Users\alexz\anaconda3\Lib\dis.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\utils\log.py first seen with mtime 1691988852.4691796
 File C:\Users\alexz\anaconda3\Lib\pkgutil.py first seen with mtime 1670351481.0
@@ -163,7 +163,7 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\livereload\management\__init__.p
 File C:\Users\alexz\anaconda3\Lib\base64.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\sqlparse\utils.py first seen with mtime 1691988850.1759896
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\dispatch\__init__.py first seen with mtime 1691988852.3702855
-File C:\Users\alexz\Coding\Fashionista\home\forms.py first seen with mtime 1693641150.2730193
+File C:\Users\alexz\Coding\SureFashion\home\forms.py first seen with mtime 1693641150.2730193
 File C:\Users\alexz\anaconda3\Lib\email\mime\base.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\core\checks\security\sessions.py first seen with mtime 1691988852.2663846
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py first seen with mtime 1691988850.9174714
@@ -177,7 +177,7 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\django\db\models\fields\related.
 File C:\Users\alexz\anaconda3\Lib\encodings\utf_8.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\__init__.py first seen with mtime 1691988850.321869
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\core\serializers\python.py first seen with mtime 1691988852.3026102
-File C:\Users\alexz\Coding\Fashionista\home\views.py first seen with mtime 1693641150.0854537
+File C:\Users\alexz\Coding\SureFashion\home\views.py first seen with mtime 1693641150.0854537
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\core\mail\utils.py first seen with mtime 1691988852.2779405
 File C:\Users\alexz\anaconda3\Lib\site-packages\sqlparse\engine\filter_stack.py first seen with mtime 1691988850.1769607
 File C:\Users\alexz\anaconda3\Lib\importlib\_abc.py first seen with mtime 1670351481.0
@@ -196,7 +196,7 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\django\core\files\move.py first 
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\db\models\fields\files.py first seen with mtime 1691988852.357169
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\db\models\fields\related_descriptors.py first seen with mtime 1691988852.3597307
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\templatetags\cache.py first seen with mtime 1691988852.4440114
-File C:\Users\alexz\Coding\Fashionista\manage.py first seen with mtime 1691988883.0952516
+File C:\Users\alexz\Coding\SureFashion\manage.py first seen with mtime 1691988883.0952516
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\core\serializers\base.py first seen with mtime 1691988852.3015914
 File C:\Users\alexz\anaconda3\Lib\site-packages\sqlparse\engine\__init__.py first seen with mtime 1691988850.1769607
 File C:\Users\alexz\anaconda3\Lib\site-packages\sqlparse\filters\__init__.py first seen with mtime 1691988850.1789813
@@ -267,7 +267,7 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\django\apps\config.py first seen
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\__init__.py first seen with mtime 1691988850.5493083
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\admin\exceptions.py first seen with mtime 1691988850.5533438
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\template\loaders\filesystem.py first seen with mtime 1691988852.4420133
-File C:\Users\alexz\Coding\Fashionista\home\apps.py first seen with mtime 1692070102.7717307
+File C:\Users\alexz\Coding\SureFashion\home\apps.py first seen with mtime 1692070102.7717307
 File C:\Users\alexz\anaconda3\Lib\json\__init__.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\admin\filters.py first seen with mtime 1691988850.5543416
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\core\checks\templates.py first seen with mtime 1691988852.2623947
@@ -386,7 +386,7 @@ File C:\Users\alexz\anaconda3\Lib\asyncio\subprocess.py first seen with mtime 16
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\db\backends\__init__.py first seen with mtime 1691988852.307593
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\utils\numberformat.py first seen with mtime 1691988852.471172
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\sessions\__init__.py first seen with mtime 1691988851.9899766
-File C:\Users\alexz\Coding\Fashionista\fashionista\urls.py first seen with mtime 1692813326.421943
+File C:\Users\alexz\Coding\SureFashion\SureFashion\urls.py first seen with mtime 1692813326.421943
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\core\files\locks.py first seen with mtime 1691988852.2673736
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\core\serializers\__init__.py first seen with mtime 1691988852.300613
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\template\base.py first seen with mtime 1691988852.4288762
@@ -471,7 +471,7 @@ File C:\Users\alexz\anaconda3\DLLs\_lzma.pyd first seen with mtime 1677694805.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\utils\deconstruct.py first seen with mtime 1691988852.462087
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\urls\exceptions.py first seen with mtime 1691988852.4535806
 File C:\Users\alexz\anaconda3\Lib\http\client.py first seen with mtime 1670351481.0
-File C:\Users\alexz\Coding\Fashionista\fashionista\__init__.py first seen with mtime 1691988882.2452743
+File C:\Users\alexz\Coding\SureFashion\SureFashion\__init__.py first seen with mtime 1691988882.2452743
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\http\cookie.py first seen with mtime 1691988852.4213676
 File C:\Users\alexz\anaconda3\Lib\sre_constants.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\views\generic\base.py first seen with mtime 1691988852.4877675
@@ -563,7 +563,7 @@ File C:\Users\alexz\anaconda3\Lib\multiprocessing\process.py first seen with mti
 File C:\Users\alexz\anaconda3\Lib\getpass.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\core\checks\compatibility\__init__.py first seen with mtime 1691988852.2643929
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\core\management\commands\__init__.py first seen with mtime 1691988852.2844965
-File C:\Users\alexz\Coding\Fashionista\home\__init__.py first seen with mtime 1692070100.9304676
+File C:\Users\alexz\Coding\SureFashion\home\__init__.py first seen with mtime 1692070100.9304676
 File C:\Users\alexz\anaconda3\Lib\email\mime\nonmultipart.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\asyncio\sslproto.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\asyncio\selector_events.py first seen with mtime 1670351481.0
@@ -601,12 +601,12 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\messages\api.py f
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\db\backends\sqlite3\operations.py first seen with mtime 1691988852.3343334
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\utils\translation\__init__.py first seen with mtime 1691988852.4761922
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\utils\translation\trans_real.py first seen with mtime 1691988852.4781723
-File C:\Users\alexz\Coding\Fashionista\home\templates\home first seen with mtime 1693342851.2274802
-File C:\Users\alexz\Coding\Fashionista\home\templates\home\authentication.html first seen with mtime 1693357095.3338716
-File C:\Users\alexz\Coding\Fashionista\home\templates\home\base.html first seen with mtime 1693516652.0415485
-File C:\Users\alexz\Coding\Fashionista\home\templates\home\home.html first seen with mtime 1693357097.2172146
-File C:\Users\alexz\Coding\Fashionista\home\templates\home\inspiration.html first seen with mtime 1693714174.7057838
-File C:\Users\alexz\Coding\Fashionista\home\templates\home\wardrobe.html first seen with mtime 1693586670.0336375
+File C:\Users\alexz\Coding\SureFashion\home\templates\home first seen with mtime 1693342851.2274802
+File C:\Users\alexz\Coding\SureFashion\home\templates\home\authentication.html first seen with mtime 1693357095.3338716
+File C:\Users\alexz\Coding\SureFashion\home\templates\home\base.html first seen with mtime 1693516652.0415485
+File C:\Users\alexz\Coding\SureFashion\home\templates\home\home.html first seen with mtime 1693357097.2172146
+File C:\Users\alexz\Coding\SureFashion\home\templates\home\inspiration.html first seen with mtime 1693714174.7057838
+File C:\Users\alexz\Coding\SureFashion\home\templates\home\wardrobe.html first seen with mtime 1693586670.0336375
 File C:\Users\alexz\anaconda3\Lib\site-packages\bs4\builder\_html5lib.py first seen with mtime 1650293103.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\auth\migrations\0005_alter_user_last_login_null.py first seen with mtime 1691988851.205811
 File C:\Users\alexz\anaconda3\Lib\site-packages\bs4\element.py first seen with mtime 1650293103.0
@@ -614,13 +614,13 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\langthaimodel.py first s
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\auth\migrations\0007_alter_validators_add_error_messages.py first seen with mtime 1691988851.2068093
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\sbcharsetprober.py first seen with mtime 1642114107.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\admin\migrations\0002_logentry_remove_auto_add.py first seen with mtime 1691988850.8082182
-File C:\Users\alexz\Coding\Fashionista\home\migrations\0010_similaritem_belt.py first seen with mtime 1693416176.6199625
+File C:\Users\alexz\Coding\SureFashion\home\migrations\0010_similaritem_belt.py first seen with mtime 1693416176.6199625
 File C:\Users\alexz\anaconda3\Lib\site-packages\html5lib\_trie\_base.py first seen with mtime 1687441424.8619215
 File C:\Users\alexz\anaconda3\Lib\site-packages\PIL\TiffTags.py first seen with mtime 1672618652.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\PIL\_deprecate.py first seen with mtime 1672618652.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\html5lib\treebuilders\base.py first seen with mtime 1687441424.8729157
 File C:\Users\alexz\anaconda3\Lib\site-packages\soupsieve\css_types.py first seen with mtime 1666296561.0
-File C:\Users\alexz\Coding\Fashionista\home\migrations\0005_product_category_similaritem_category_and_more.py first seen with mtime 1693202432.8097959
+File C:\Users\alexz\Coding\SureFashion\home\migrations\0005_product_category_similaritem_category_and_more.py first seen with mtime 1693202432.8097959
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\universaldetector.py first seen with mtime 1642114107.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\mbcsgroupprober.py first seen with mtime 1642114107.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\auth\migrations\0011_update_proxy_permissions.py first seen with mtime 1691988851.2078092
@@ -646,7 +646,7 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\sessions\exceptio
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\auth\migrations\0003_alter_user_email_max_length.py first seen with mtime 1691988851.2048104
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\eucjpprober.py first seen with mtime 1642114107.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\escsm.py first seen with mtime 1642114107.0
-File C:\Users\alexz\Coding\Fashionista\home\migrations\__init__.py first seen with mtime 1692070100.9314263
+File C:\Users\alexz\Coding\SureFashion\home\migrations\__init__.py first seen with mtime 1692070100.9314263
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\chardistribution.py first seen with mtime 1642114107.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\auth\migrations\0004_alter_user_username_opts.py first seen with mtime 1691988851.205811
 File C:\Users\alexz\anaconda3\Lib\encodings\idna.py first seen with mtime 1670351481.0
@@ -671,18 +671,18 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\euckrfreq.py first seen 
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\sessions\backends\db.py first seen with mtime 1691988851.9959757
 File C:\Users\alexz\anaconda3\Lib\site-packages\html5lib\treebuilders\__init__.py first seen with mtime 1687441424.8719177
 File C:\Users\alexz\anaconda3\Lib\xml\sax\_exceptions.py first seen with mtime 1670351481.0
-File C:\Users\alexz\Coding\Fashionista\home\migrations\0013_alter_product_similar_item_alter_product_styles.py first seen with mtime 1693514417.129221
+File C:\Users\alexz\Coding\SureFashion\home\migrations\0013_alter_product_similar_item_alter_product_styles.py first seen with mtime 1693514417.129221
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\mbcssm.py first seen with mtime 1642114107.0
 File C:\Users\alexz\anaconda3\Lib\xml\etree\ElementPath.py first seen with mtime 1670351481.0
-File C:\Users\alexz\Coding\Fashionista\home\migrations\0001_initial.py first seen with mtime 1693349072.2546191
+File C:\Users\alexz\Coding\SureFashion\home\migrations\0001_initial.py first seen with mtime 1693349072.2546191
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\auth\migrations\0001_initial.py first seen with mtime 1691988851.2038074
-File C:\Users\alexz\Coding\Fashionista\home\migrations\0003_similaritem_product_heat_index_product_primary_color_and_more.py first seen with mtime 1693512024.8059292
+File C:\Users\alexz\Coding\SureFashion\home\migrations\0003_similaritem_product_heat_index_product_primary_color_and_more.py first seen with mtime 1693512024.8059292
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\admin\migrations\__init__.py first seen with mtime 1691988850.8102307
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\middleware\clickjacking.py first seen with mtime 1691988852.424348
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\langturkishmodel.py first seen with mtime 1642114107.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\codingstatemachine.py first seen with mtime 1642114107.0
 File C:\Users\alexz\anaconda3\Lib\xml\__init__.py first seen with mtime 1670351481.0
-File C:\Users\alexz\Coding\Fashionista\home\migrations\0012_alter_product_styles.py first seen with mtime 1693514263.946417
+File C:\Users\alexz\Coding\SureFashion\home\migrations\0012_alter_product_styles.py first seen with mtime 1693514263.946417
 File C:\Users\alexz\anaconda3\Lib\site-packages\PIL\_binary.py first seen with mtime 1672618652.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\soupsieve\__meta__.py first seen with mtime 1666296561.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\html5lib\html5parser.py first seen with mtime 1687441424.8599048
@@ -702,7 +702,7 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\sessions\backends
 File C:\Users\alexz\anaconda3\Lib\site-packages\cffi\lock.py first seen with mtime 1670423521.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\html5lib\treewalkers\__init__.py first seen with mtime 1687441424.8759148
 File C:\Users\alexz\anaconda3\Lib\site-packages\bs4\builder\_lxml.py first seen with mtime 1650293103.0
-File C:\Users\alexz\Coding\Fashionista\fashionista\wsgi.py first seen with mtime 1691988883.086726
+File C:\Users\alexz\Coding\SureFashion\SureFashion\wsgi.py first seen with mtime 1691988883.086726
 File C:\Users\alexz\anaconda3\Lib\xml\parsers\__init__.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\bs4\builder\_htmlparser.py first seen with mtime 1650293103.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\db\migrations\graph.py first seen with mtime 1691988852.338868
@@ -723,10 +723,10 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\__init__.py first seen w
 File C:\Users\alexz\anaconda3\Lib\site-packages\html5lib\__init__.py first seen with mtime 1687441424.85425
 File C:\Users\alexz\anaconda3\Lib\site-packages\defusedxml\ElementTree.py first seen with mtime 1615228157.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\bs4\__init__.py first seen with mtime 1650293103.0
-File C:\Users\alexz\Coding\Fashionista\home\migrations\0007_product_formality_similaritem_formality.py first seen with mtime 1693267274.6813617
+File C:\Users\alexz\Coding\SureFashion\home\migrations\0007_product_formality_similaritem_formality.py first seen with mtime 1693267274.6813617
 File C:\Users\alexz\anaconda3\Lib\xml\sax\saxutils.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\escprober.py first seen with mtime 1642114107.0
-File C:\Users\alexz\Coding\Fashionista\home\migrations\0009_product_belt.py first seen with mtime 1693361741.2134528
+File C:\Users\alexz\Coding\SureFashion\home\migrations\0009_product_belt.py first seen with mtime 1693361741.2134528
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\auth\migrations\0002_alter_permission_name_max_length.py first seen with mtime 1691988851.2038074
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\sessions\middleware.py first seen with mtime 1691988851.9929984
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\auth\migrations\0008_alter_user_username_max_length.py first seen with mtime 1691988851.2068093
@@ -739,15 +739,15 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\auth\migrations\0
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\latin1prober.py first seen with mtime 1642114107.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\html5lib\_tokenizer.py first seen with mtime 1687441424.8564713
 File C:\Users\alexz\anaconda3\Lib\site-packages\soupsieve\__init__.py first seen with mtime 1666296561.0
-File C:\Users\alexz\Coding\Fashionista\home\migrations\0011_alter_product_primary_color_and_more.py first seen with mtime 1693513132.681118
+File C:\Users\alexz\Coding\SureFashion\home\migrations\0011_alter_product_primary_color_and_more.py first seen with mtime 1693513132.681118
 File C:\Users\alexz\anaconda3\Lib\site-packages\html5lib\serializer.py first seen with mtime 1687441424.8609207
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\contenttypes\migrations\0001_initial.py first seen with mtime 1691988851.3233695
 File C:\Users\alexz\anaconda3\Lib\xml\sax\xmlreader.py first seen with mtime 1670351481.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\PIL\ImageMode.py first seen with mtime 1672618652.0
 File C:\Users\alexz\anaconda3\Lib\xml\parsers\expat.py first seen with mtime 1670351481.0
-File C:\Users\alexz\Coding\Fashionista\home\migrations\0004_similaritem_image_alter_product_primary_color_and_more.py first seen with mtime 1693512024.8059292
+File C:\Users\alexz\Coding\SureFashion\home\migrations\0004_similaritem_image_alter_product_primary_color_and_more.py first seen with mtime 1693512024.8059292
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\auth\migrations\0009_alter_user_last_name_max_length.py first seen with mtime 1691988851.2078092
-File C:\Users\alexz\Coding\Fashionista\home\migrations\0006_alter_similaritem_category.py first seen with mtime 1693266284.3691156
+File C:\Users\alexz\Coding\SureFashion\home\migrations\0006_alter_similaritem_category.py first seen with mtime 1693266284.3691156
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\euckrprober.py first seen with mtime 1642114107.0
 File C:\Users\alexz\anaconda3\DLLs\pyexpat.pyd first seen with mtime 1677694804.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\admin\migrations\0003_logentry_add_action_flag_choices.py first seen with mtime 1691988850.8091924
@@ -761,9 +761,9 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\lxml\etree.cp310-win_amd64.pyd f
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\enums.py first seen with mtime 1642114107.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\hebrewprober.py first seen with mtime 1642114107.0
 File C:\Users\alexz\anaconda3\Lib\site-packages\html5lib\_utils.py first seen with mtime 1687441424.8574884
-File C:\Users\alexz\Coding\Fashionista\home\migrations\0008_alter_product_formality_alter_similaritem_formality.py first seen with mtime 1693267333.270248
+File C:\Users\alexz\Coding\SureFashion\home\migrations\0008_alter_product_formality_alter_similaritem_formality.py first seen with mtime 1693267333.270248
 File C:\Users\alexz\anaconda3\Lib\site-packages\chardet\gb2312freq.py first seen with mtime 1642114107.0
-File C:\Users\alexz\Coding\Fashionista\home\migrations\0002_alter_product_user.py first seen with mtime 1692923017.3430166
+File C:\Users\alexz\Coding\SureFashion\home\migrations\0002_alter_product_user.py first seen with mtime 1692923017.3430166
 (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2023-09-03 04:14:07.958068' AND "django_session"."session_key" = 'iny6qw72m2ktavnopikhe6chjql3lpn8') LIMIT 21; args=('2023-09-03 04:14:07.958068', 'iny6qw72m2ktavnopikhe6chjql3lpn8'); alias=default
 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1 LIMIT 21; args=(1,); alias=default
 "GET /inspiration/ HTTP/1.1" 200 2392
@@ -778,6 +778,6 @@ File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\staticfiles\stora
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\auth\context_processors.py first seen with mtime 1691988851.0731885
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\messages\storage\cookie.py first seen with mtime 1691988851.749056
 File C:\Users\alexz\anaconda3\Lib\site-packages\django\contrib\sessions\serializers.py first seen with mtime 1691988851.9939976
-File C:\Users\alexz\Coding\Fashionista\fashionista\settings.py previous mtime: 1693714444.7785654, current mtime: 1693714459.6218128
-C:\Users\alexz\Coding\Fashionista\fashionista\settings.py notified as changed. Signal results: [(<function template_changed at 0x0000028DF8FE1D80>, None), (<function translation_file_changed at 0x0000028DF989A560>, None)].
-C:\Users\alexz\Coding\Fashionista\fashionista\settings.py changed, reloading.
+File C:\Users\alexz\Coding\SureFashion\SureFashion\settings.py previous mtime: 1693714444.7785654, current mtime: 1693714459.6218128
+C:\Users\alexz\Coding\SureFashion\SureFashion\settings.py notified as changed. Signal results: [(<function template_changed at 0x0000028DF8FE1D80>, None), (<function translation_file_changed at 0x0000028DF989A560>, None)].
+C:\Users\alexz\Coding\SureFashion\SureFashion\settings.py changed, reloading.

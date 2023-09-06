@@ -1,4 +1,67 @@
 body , html{
-    background-color: rgba(233, 233, 233, 0.295);
-    height: 100%;
+    background-color: rgba(126, 126, 126, 0.142);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+.row{
+  width: 100%
+}
+
+.content-box{
+  width: 450px
+}
+
+.logo{
+  width: 450px
+}
+
+.auth-panel{
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: rgb(255, 255, 255);
+  border: rgb(238, 238, 238) solid 2px;
+  border-radius: 5px;
+  
+}
+
+.nav-tabs .nav-link {
+  width: 100%;
+  background-color: rgba(189, 189, 189, 0.265);
+}
+
+.nav-item{
+  width: 50%;
+  text-align: center;
+}
+
+.tab-pane{
+  flex-direction: column;
+}
+
+form input {
+  font-size: 16px;
+  color: #74747490;
+  display: block;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #74747490;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+form input:focus {
+  color: #000; /* Change the text color when focused */
+  border-bottom: 1px solid #000; /* Change the border color when focused */
+}
+
+
+
