@@ -144,3 +144,5 @@ AUTHENTICATION_BACKENDS = (
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '294634314827-rdeg2qk9sd5haishvd2m2qrrkmnf6uk3.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+
+LOGIN_REDIRECT_URL = '/wardrobe/'  # Replace '/dashboard/' with your desired URL
