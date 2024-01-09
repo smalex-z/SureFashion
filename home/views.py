@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Product, SimilarItem, Style
-from .forms import ProductForm, RegisterForm
+from .models import Product, SimilarItem, Style, UserProfile
+from .forms import ProductForm, RegisterForm, UserProfileForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required, user_passes_test
@@ -17,28 +17,60 @@ def home(request):
 def authentication_view(request):
     login_form = AuthenticationForm()
     signup_form = RegisterForm()
+    profile_form = UserProfileForm()
     
     #Login Code
     if 'login-btn' in request.POST:
         login_form = AuthenticationForm(data=request.POST)
         if login_form.is_valid():
             user = login_form.get_user()
+            user.backend = 'django.contrib.auth.backends.ModelBackend'
             login(request, user)
             return redirect('../wardrobe')
 
-    #Signup Code
+    # Signup Code
     elif 'signup-btn' in request.POST:
         signup_form = RegisterForm(request.POST)
-        if signup_form.is_valid():
+        profile_form = UserProfileForm(request.POST, request.FILES)
+        if signup_form.is_valid() and profile_form.is_valid():
             user = signup_form.save()
+            profile = profile_form.save(commit=False)
+            profile.user = user
+            profile.save()
             login(request, user)
-            return redirect('home')  # or where you want to redirect after a successful registration #TODO: Change this to Signup Success
+            return redirect('home')
 
     return render(request, 'home/authentication.html', {
         'login_form': login_form,
-        'signup_form': signup_form
+        'signup_form': signup_form,
+        'profile_form': profile_form  # Add this line
     })
 
+@login_required
+def user_profile(request):
+    if not hasattr(request.user, 'profile'):
+        UserProfile.objects.create(user=request.user)
+
+    if request.method == "POST":
+        # Handle the form submission
+        user_form = UserUpdateForm(request.POST, instance=request.user)
+        profile_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+        
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            #TODO: Django Messages/Alerts? - messages.success(request, "Your profile has been updated!")
+            return redirect('profile')
+    else:
+        user_form = UserUpdateForm(instance=request.user)
+        profile_form = ProfileUpdateForm(instance=request.user.profile)
+
+    context = {
+        'user_form': user_form,
+        'profile_form': profile_form
+    }
+
+    return render(request, 'home/profile.html', context)
 
 #Logout. Pretty Self-explaiatory imo. Parden the spelling
 def logout_view(request):

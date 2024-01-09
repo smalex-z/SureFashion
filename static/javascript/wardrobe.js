@@ -32,6 +32,16 @@ $(document).ready(function() {
   });
 });
 
+//Tooltips
+$(function () {
+  $('[data-bs-toggle="tooltip"]').tooltip({
+    delay: { "show": 500, "hide": 100 },
+    trigger: 'hover',
+    html: false
+  })
+});
+
+
 
 //Multi-Staged Add Product Modal
 document.addEventListener('DOMContentLoaded', function() {

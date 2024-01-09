@@ -60,10 +60,11 @@
               <p class="card-text">Heat Index: {{product.heat_index}}</p>
             </div>
             <div class="colors">
-              <span class="color-circle" style="background-color: {{ product.primary_color }};" data-bs-toggle="tooltip" data-bs-placement="top" title="Primary: {{ product.get_primary_color_display }}"></span>
+              <span class="color-circle" style="background-color: {{ product.primary_color }};" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Primary: {{ product.get_primary_color_display }}"></span>
               {% if product.secondary_color != 'n/a' %}
-                <span class="color-circle" style="background-color: {{ product.secondary_color }};" data-bs-toggle="tooltip" data-bs-placement="top" title="Secondary: {{ product.get_secondary_color_display }}"></span>
+              <span class="color-circle" style="background-color: {{ product.secondary_color }};" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Secondary: {{ product.get_secondary_color_display }}"></span>
               {% endif %}
+
               <!--FIXME: Why isn't the tooltip showing up ontop-->
             </div>
           </div>
@@ -103,9 +104,9 @@
               <p class="card-text">Heat Index: {{product.heat_index}}</p>=
             </div>
             <div class="colors">
-              <span class="color-circle" style="background-color: {{ product.primary_color }};" data-bs-toggle="tooltip" data-bs-placement="top" title="Primary: {{ product.get_primary_color_display }}"></span>
+              <span class="color-circle" style="background-color: {{ product.primary_color }};" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Primary: {{ product.get_primary_color_display }}"></span>
               {% if product.secondary_color != 'n/a' %}
-                <span class="color-circle" style="background-color: {{ product.secondary_color }};" data-bs-toggle="tooltip" data-bs-placement="top" title="Secondary: {{ product.get_secondary_color_display }}"></span>
+              <span class="color-circle" style="background-color: {{ product.secondary_color }};" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Secondary: {{ product.get_secondary_color_display }}"></span>
               {% endif %}
               <!--FIXME: Why isn't the tooltip showing up ontop-->
             </div>
@@ -224,9 +225,17 @@
       <!-- Stage 1- Preview -->
       <div id="previewStage">
         <!-- Modal body -->
-        <div class="modal-body text-center">
-          <img id="previewImage" class="img-fluid" alt="Product Preview">
-          <p id="previewHeatIndex"></p>
+        <div class="modal-body row p-0">
+          <div class="col column">
+            <img id="previewImage" class="img-fluid" alt="Product Preview">
+            <p id="previewHeatIndex"></p>
+          </div>
+          <div class="col column">
+            <p>some stuff</p>
+          </div>
+          <div class="col column">
+            <p>some stuff</p>
+          </div>
         </div>
 
         <!-- Modal Footer-->

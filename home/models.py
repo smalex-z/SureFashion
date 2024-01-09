@@ -55,6 +55,11 @@ SECONDARY_COLOR_CHOICES = [
 
 
 # Create your models here.
+class Photo(models.Model):
+    image = models.ImageField(upload_to='products/', default='products/default.png')
+
+    def __str__(self):
+        return str(self.image)
 
 class SimilarItem(models.Model):
     name = models.CharField(max_length=200, default='n/a')
@@ -71,6 +76,8 @@ class SimilarItem(models.Model):
         default=5
     )
     belt = models.BooleanField(default=False)
+    fits = models.ManyToManyField('Photo', blank=True)
+
     # ... Other attributes
 
     def __str__(self):
@@ -107,6 +114,14 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+    
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
+    image = models.ImageField(upload_to='profile_pics/', default='profile_pics/default.png')
+
+    def __str__(self):
+        return self.user.username
+
     
 #TODO: Add a model for saved outfits
     

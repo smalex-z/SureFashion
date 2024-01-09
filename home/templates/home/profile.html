@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block title %}Wardrobe{%endblock title %}
+{% block content %}
+<!--TODO: Update this page pls, clean it up n stuff-->
+
+<div class="container">
+    <h2>Update Profile</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        {{ profile_form.as_p }}
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
+{% endblock %}
