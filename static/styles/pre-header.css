@@ -22,10 +22,11 @@
 .left-section {
   display: flex;
   align-items: center;
+  height: 90px;
 }
 
 .logo {
-  height: 72px;
+  height: 90px;
 }
 
 .middle-section {

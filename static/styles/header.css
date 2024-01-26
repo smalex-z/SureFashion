@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   
     position: fixed;
     top: 0;
@@ -21,6 +22,7 @@
   .left-section {
     display: flex;
     align-items: center;
+    height: 72px
   }
   
   .logo {
@@ -28,7 +30,9 @@
   }
   
   .middle-section {
-    display: flex;
+    position: absolute;
+    left: 50%;  /* Move the left side to the center of the parent */
+    transform: translateX(-50%);  /* Shift it back by half of its width to center it */
     align-items: center;
     flex-grow: 0;
   }
@@ -59,29 +63,19 @@
     text-decoration: underline;
   }
   
-  .login{
-    margin-right: 0px;
-    width: 150px;
-  }
-  
-  .signup-button{
-    width: 150px;
-    height: 50px;
-    border-radius: 25px;
-    font-size: x-large;
-  }
-  
-  .signup-button:hover{
-    background-color: #00000000;
-    color: #000000;
-    cursor: pointer;
-  }
   
   .right-section {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-right: 20px;
+  }
+
+  .profile-picture {
+    width: 40px;  /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    border-radius: 50%; /* This makes the image circular */
+    object-fit: cover;  /* Ensures the image scales correctly */
   }
   
   .header-spacer{
@@ -110,11 +104,9 @@
     margin-right: 4px;
   }
 
-  .signup-button{
-    width: 120px;
-    height: 40px;
-    border-radius: 20px;
-    font-size: large;
+  .profile-picture {
+    width: 32px;  /* Adjust as needed */
+    height: 32px; /* Adjust as needed */
   }
 
 }
@@ -137,11 +129,9 @@
     margin-right: 3px;
   }
 
-  .signup-button{
-    width: 90px;
-    height: 30px;
-    border-radius: 15px;
-    font-size: small;
+  .profile-picture {
+    width: 24px;  /* Adjust as needed */
+    height: 24px; /* Adjust as needed */
   }
 
 }

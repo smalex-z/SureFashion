@@ -1,7 +1,21 @@
 .sidebar{
-    background-color: rgba(0, 255, 255, 0.192);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .preview{
-    background-color: rgba(255, 0, 0, 0.21);
+    background-color: white;
+    flex-grow: 2;
 }
+
+  /*gives the boxes a thin grey border*/
+  .border-box{
+    border: rgb(238, 238, 238) solid 2px;
+  }
+
+.fill-space{
+    flex-grow: 1;
+  }
+

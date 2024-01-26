@@ -1,6 +1,6 @@
 from . import views
 
-from django.urls import path
+from django.urls import path, include
 
 #Put any new pages you create here.
 urlpatterns = [
@@ -11,5 +11,8 @@ urlpatterns = [
     path('inspiration/', views.inspiration, name= "inspiration"),       #Inspiration
     path('admin_items/', views.admin_items, name='admin_items'),        #Admin page to view Similar items
     path('admin_styles/', views.admin_styles, name='admin_styles'),     #Admin page to view styles
+    path('auth/', include('social_django.urls', namespace='social')),   #Include social-auth URLs here
+    path('profile/', views.user_profile, name='profile'),               #User Profile
+    
 ]
 
