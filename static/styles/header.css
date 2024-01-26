@@ -22,6 +22,7 @@
   .left-section {
     display: flex;
     align-items: center;
+    height: 72px
   }
   
   .logo {
