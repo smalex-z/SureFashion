@@ -123,5 +123,25 @@ class UserProfile(models.Model):
         return self.user.username
 
     
-#TODO: Add a model for saved outfits
+class Outfit(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="outfits")
+    name = models.CharField(max_length=200, default='n/a')
+    image = models.ImageField(upload_to='outfits/', default='outfits/default.png')
+    date_added = models.DateTimeField(auto_now_add=True)
+    primary_color = models.CharField(max_length=50, choices=PRIMARY_COLOR_CHOICES, default='black')
+    secondary_color = models.CharField(max_length=50, choices=SECONDARY_COLOR_CHOICES, default='black')
+    formality = models.IntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(5)],
+        default= 1
+    )
+    heat_index = models.IntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(10)],
+        default= 5
+    )
+    belt = models.BooleanField(default=False)
+    styles = models.ManyToManyField(Style, related_name='outfits', blank=True)
+    # ... Other attributes
+
+    def __str__(self):
+        return self.name
     

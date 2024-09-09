@@ -21,3 +21,56 @@ body , html{
   flex-direction: column;
   /*TODO ASAP: Get body to 100 vh and override in wardrobe */
 }
+
+/* Default for larger screens */
+html {
+  font-size: 16px; /* Base font size */
+}
+/* Extra large desktops (2560px and above) */
+@media (min-width: 2560px) {
+  html {
+      font-size: 24px; /* Increase font size for very large screens */
+  }
+}
+
+/* Ultra-wide screens (3840px and above, e.g., 4K monitors) */
+@media (min-width: 3840px) {
+  html {
+      font-size: 36px; /* Further increase font size for ultra-wide screens */
+  }
+}
+
+/* Large desktops (1920px to 2559px) */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  html {
+      font-size: 18px; /* Adjusted font size for standard large screens */
+  }
+}
+
+/* Desktops and laptops (1440px to 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  html {
+      font-size: 16px; /* Default font size */
+  }
+}
+
+/* Small desktops and laptops (1024px to 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  html {
+      font-size: 12px; /* Slightly smaller font size */
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  html {
+      font-size: 10px; /* Smaller font size for tablets */
+  }
+}
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+  html {
+      font-size: 8px; /* Even smaller font size for mobile */
+  }
+}

@@ -7,6 +7,7 @@ $(document).ready(function() {
       const wardrobe = document.getElementById('wardrobe');
       const styles = document.getElementById('styles');
       const similarItems = document.getElementById('similar-items');
+      const outfits = document.getElementById('outfits');
 
       // Get the ID of the selected tab
       var selectedTab = $(this).attr('id');
@@ -17,18 +18,28 @@ $(document).ready(function() {
           wardrobe.style.display = 'block';
           styles.style.display = 'none';
           similarItems.style.display = 'none';
+          outfits.style.display = 'none';
       } else if (selectedTab === 'styles-tab') {
           // Styles tab selected
           wardrobe.style.display = 'none';
           styles.style.display = 'block';
           similarItems.style.display = 'none';
+          outfits.style.display = 'none';
           console.log('cancel');
       } else if (selectedTab === 'similar-items-tab') {
           // Similar Items tab selected
           wardrobe.style.display = 'none';
           styles.style.display = 'none';
           similarItems.style.display = 'block';
+          outfits.style.display = 'none';
+      } else if (selectedTab === 'outfits-tab') {
+        // Similar Items tab selected
+        wardrobe.style.display = 'none';
+        styles.style.display = 'none';
+        similarItems.style.display = 'none';
+        outfits.style.display = 'block';
       }
+      
   });
 });
 
